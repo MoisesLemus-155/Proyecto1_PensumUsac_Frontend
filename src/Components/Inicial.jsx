@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { pensumData } from "../Api/ApiPensum"
-import { PokeNavbar } from "./Navbar"
+import { PensumNavbar } from "./Navbar"
 import { useEditor, useError } from "../context/ErrorContext";
 import Swal from "sweetalert2";
 
@@ -11,8 +11,8 @@ export const Inicial = () => {
     const [carreraSeleccionada, setCarreraSeleccionada] = useState(null);
     const [cursoSeleccionado, setCursoSeleccionado] = useState(null);
     const [prerrequisitosRecursivos, setPrerrequisitosRecursivos] = useState([]);
-    
     const { setErrors } = useError();
+
     const refreshPage = () => {
         window.location.reload();
     };
@@ -57,7 +57,6 @@ export const Inicial = () => {
 
     const encontrarPrerrequisitosRecursivos = (codigoCurso, carrera) => {
         const encontrados = new Set();
-
         const buscar = (codigo) => {
             for (const semestre of carrera.semestres) {
                 for (const curso of semestre.cursos) {
@@ -72,7 +71,6 @@ export const Inicial = () => {
                 }
             }
         };
-
         buscar(codigoCurso);
         return Array.from(encontrados);
     };
@@ -87,7 +85,7 @@ export const Inicial = () => {
 
     return (
         <>
-            <PokeNavbar onFileClick={handleFileClick} />
+            <PensumNavbar onFileClick={handleFileClick} />
             <div className="container">
                 <div className="row">
                     <div className="col-lg-6 col-md-6 col-sm-12 col-token">

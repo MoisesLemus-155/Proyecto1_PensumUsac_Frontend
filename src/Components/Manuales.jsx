@@ -1,4 +1,4 @@
-import { PokeNavbar } from "./Navbar"
+import { PensumNavbar } from "./Navbar"
 import Swal from "sweetalert2";
 
 export const Manuales = () => {
@@ -24,7 +24,7 @@ export const Manuales = () => {
 
     return (
         <>
-            <PokeNavbar />
+            <PensumNavbar />
 
             <div className="container mt-5">
                 <div className="row justify-content-center gap-4">

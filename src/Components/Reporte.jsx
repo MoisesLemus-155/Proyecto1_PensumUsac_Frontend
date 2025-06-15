@@ -1,11 +1,11 @@
 import { useError } from '../context/ErrorContext';
-import { PokeNavbar } from './Navbar';
+import { PensumNavbar } from './Navbar';
 
 export const Reporte = () => {
     const { errors } = useError();
     return (
         <>
-            <PokeNavbar />
+            <PensumNavbar />
             <div className="container mt-4">
                 <h2>Reporte de Errores</h2>
                 {errors.length === 0 ? (<p>No se encontraron errores.</p>) : (

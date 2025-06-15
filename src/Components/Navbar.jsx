@@ -2,13 +2,12 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import './index.css'
 
-export const PokeNavbar = ({ onFileClick }) => {
+export const PensumNavbar = ({ onFileClick }) => {
     const [isResponsive, setIsResponsive] = useState(false);
 
     const toggleNav = () => {
         setIsResponsive(!isResponsive);
     };
-
     return (
         <div className={`topnav${isResponsive ? " responsive" : ""}`} id="myTopnav">
             <ul className="nav nav-pills">
@@ -24,7 +23,6 @@ export const PokeNavbar = ({ onFileClick }) => {
                     <i className="fa fa-bars icono" />
                 </a>
             </ul>
-
         </div>
     )
 }
