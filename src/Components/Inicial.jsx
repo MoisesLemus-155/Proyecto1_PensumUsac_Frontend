@@ -165,7 +165,7 @@ export const Inicial = () => {
                                                 <strong>{curso.codigo}</strong><br />
                                                 {curso.nombre}
                                                 <p>Area: {curso.area}</p>
-                                                <p>Prerrequisito: {curso.prerrequisitos}</p>
+                                                <p>Prerrequisito: {curso.prerrequisitos.join(',')}</p>
                                             </div>
                                         );
                                     })}
@@ -178,7 +178,7 @@ export const Inicial = () => {
             <input
                 type="file"
                 id="fileInput"
-                accept=".pklfp"
+                accept=".plfp"
                 style={{ display: 'none' }}
                 onChange={handleFileLoad}
             />
